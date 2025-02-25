@@ -1,0 +1,116 @@
+/* Home Container */
+.home-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #0f0102, #1749d3, #051120, #533483);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+/* Animated Background */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Content Layout */
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Left Side - About Me */
+.about-me {
+    flex: 1;
+    text-align: left;
+    color: white;
+}
+
+.about-me h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #60a5fa;
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.about-me p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+/* Button */
+.about-me .btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #2563eb;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.about-me .btn:hover {
+    background: #1e40af;
+}
+
+/* Right Side - Profile Image */
+.profile-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -15%;
+}
+
+.profile-container img {
+    width: 35rem;
+    height: 35rem;
+    border-radius: 50%;
+    border: 4px solid #60a5fa;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-container img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Additional Info Section */
+.extra-info {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+/* Typing Text */
+.typing-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #60a5fa;
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+}

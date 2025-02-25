@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gradient animation */
+#gradient-bg {
+  background: linear-gradient(45deg, #000428, #004e92);
+  transition: background 0.3s ease-in-out;
+}

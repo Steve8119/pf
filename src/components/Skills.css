@@ -1,0 +1,80 @@
+/* Skills Section */
+.skills-container {
+    background: linear-gradient(135deg, #063a6e, #2022cf);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated Title */
+.animated-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #60a5fa;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    display: inline-block;
+    animation: floatTitle 3s ease-in-out infinite;
+    margin-bottom: 30px;
+}
+
+/* Skills Row (All in One Line) */
+.skills-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Skill Box */
+.skill-box {
+    background: rgba(2, 2, 2, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    min-width: 180px;
+    max-width: 200px;
+}
+
+/* Skill Box Title */
+.skill-box h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #a5aeb9;
+}
+
+/* Hidden Description */
+.skill-description {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Hover Effect */
+.skill-box:hover {
+    background: rgba(46, 7, 223, 0.2);
+    transform: scale(1.05);
+}
+
+.skill-box:hover .skill-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Floating Animation */
+@keyframes floatTitle {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}

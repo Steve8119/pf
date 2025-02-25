@@ -1,0 +1,76 @@
+/* Contact Section */
+.contact-container {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0%;
+}
+
+/* Animated Title */
+.animated-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #60a5fa;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    display: inline-block;
+    animation: floatTitle 3s ease-in-out infinite;
+    margin-bottom: 30px;
+}
+
+/* Contact Row (All in One Line) */
+.contact-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Contact Box */
+.contact-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    min-width: 180px;
+    max-width: 250px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Contact Box Hover Effect */
+.contact-box:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Contact Icon */
+.contact-icon {
+    font-size: 2rem;
+    color: #60a5fa;
+    margin-bottom: 10px;
+}
+
+/* Contact Box Title */
+.contact-box h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+/* Floating Animation */
+@keyframes floatTitle {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
