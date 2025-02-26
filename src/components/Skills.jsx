@@ -1,3 +1,4 @@
+// src/components/Skills.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import "./Skills.css";
@@ -29,7 +30,7 @@ export default function Skills() {
         Skills
       </motion.h2>
       
-      <div className="skills-row">
+      <div className="skills-grid">
         {skillsData.map((skill, index) => (
           <motion.div 
             key={index} 
