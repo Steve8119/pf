@@ -142,7 +142,7 @@
     }
 }
 
-/* Responsive Design */
+/* Responsive Design - Image Above Text in Mobile View */
 @media (max-width: 900px) {
     .experience-item {
         flex-direction: column;
@@ -155,7 +155,7 @@
     }
 
     .image-container {
-        order: -1;
+        order: -1; /* Moves the image above the text */
     }
 
     .experience-image {
