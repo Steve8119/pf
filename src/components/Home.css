@@ -88,7 +88,6 @@
     transform: scale(1.05);
 }
 
-
 /* Additional Info Section */
 .extra-info {
     margin-top: 20px;
@@ -113,4 +112,44 @@
     font-style: italic;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        height: auto;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .about-me h2 {
+        font-size: 2rem;
+    }
+
+    .about-me p {
+        font-size: 1rem;
+    }
+
+    /* Reduce profile image size on mobile */
+    .profile-container {
+        margin: 20px 0;
+        justify-content: center;
+    }
+
+    .profile-container img {
+        width: 80%;
+        max-width: 250px;
+        height: auto;
+    }
 }

@@ -1,3 +1,4 @@
+// src/components/Home.jsx
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
@@ -16,14 +17,7 @@ export default function Home() {
       exit={{ opacity: 0, x: 50 }}
       transition={{ duration: 1 }}
     >
-      <motion.div 
-        className="gradient-bg" 
-        animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-      />
-
       <div className="content-container">
-        {/* Left - About Me */}
         <motion.div 
           className="about-me"
           initial={{ opacity: 0, y: -20 }}
@@ -46,7 +40,6 @@ export default function Home() {
             I am skilled in <span>Django, React JS, Graphic Design, Social Media Management,</span> 
             and <span>Live Streaming</span>.
           </p>
-
           <motion.button 
             className="btn"
             whileHover={{ scale: 1.1 }}
@@ -79,7 +72,7 @@ export default function Home() {
           animate={{ scale: 1 }}
           transition={{ duration: 1.2, delay: 0.5 }}
         >
-          <img src={profileImage} alt="Profile" />
+          <img src={profileImage} alt="Profile" className="responsive-img" />
         </motion.div>
       </div>
     </motion.section>
