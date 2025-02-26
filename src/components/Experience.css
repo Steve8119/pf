@@ -1,11 +1,11 @@
-/* 🔹 Main Experience Section */
+/* Main Experience Section */
 .experience-container {
     text-align: center;
     padding: 100px 20px;
     background: #f9f9f9;
 }
 
-/* 🔹 Title Styling */
+/* Title Styling */
 .animated-title {
     font-size: 2.8rem;
     font-weight: bold;
@@ -16,7 +16,7 @@
     animation: fadeIn 1.5s ease-in-out;
 }
 
-/* 🔹 Experience List */
+/* Experience List */
 .experience-list {
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@
     margin: 0 auto;
 }
 
-/* 🔹 Experience Item Layout */
+/* Experience Item Layout */
 .experience-item {
     display: flex;
     align-items: center;
@@ -45,48 +45,57 @@
     flex-direction: row-reverse;
 }
 
-/* 🔹 Image Styling */
+/* Image Styling */
 .image-container {
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
+/* Image Effects: Rolling & Bouncing */
 .experience-image {
     width: 220px;
     height: 220px;
     border-radius: 50%;
     object-fit: cover;
+    flex-shrink: 0;
+    opacity: 1;
+    transform: scale(1);
     transition: transform 0.3s ease-in-out;
-    animation: rollIn 1.8s ease-out forwards, bounceUpDown 1.5s infinite ease-in-out 2s;
+    animation: rollIn 1.8s ease-out forwards, bounceAnimation 2s infinite ease-in-out;
 }
 
-/* 🔹 Description Styling */
+/* Rolling & Bouncing on Touch */
+.experience-image:active {
+    animation: rollBounce 0.6s ease-in-out;
+}
+
+/* Text Styling */
 .text-container {
     flex: 1;
     max-width: 50%;
     text-align: left;
+    font-family: "Roboto", sans-serif;
 }
 
-/* 🔸 Experience Titles */
+/* Experience Title */
 .text-container h3 {
     font-size: 2rem;
     font-weight: bold;
-    font-family: "Poppins", sans-serif;
     color: #333;
-    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
 }
 
-/* 🔸 Experience Description */
+/* Experience Description */
 .text-container p {
-    font-size: 1.3rem;
-    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
     color: #555;
-    line-height: 1.8;
-    letter-spacing: 0.5px;
+    font-family: "Lora", serif;
 }
 
-/* 🔹 Responsive Design */
+/* Reduce Image Size on Small Screens */
 @media (max-width: 900px) {
     .experience-item {
         flex-direction: column;
@@ -102,11 +111,11 @@
         order: -2;
     }
 
-    /* Small Images on Mobile */
+    /* Small Images on Small Screens */
     .experience-image {
         width: 120px;
         height: 120px;
-        animation: bounceUpDown 1.5s infinite ease-in-out;
+        animation: bounceAnimation 2s infinite ease-in-out;
     }
 
     .text-container {
@@ -115,26 +124,27 @@
         order: 1;
     }
 
-    /* Name (Title) Styling */
+    /* Name (Title) Styling Below Image */
     .text-container h3 {
         font-size: 1.8rem;
         margin-top: 10px;
+        order: -1;
     }
 
     /* Description Styling */
     .text-container p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.6;
     }
 }
 
-/* 🔹 Read More Button */
+/* Read More Button Styling */
 .read-more-btn {
     display: flex;
     align-items: center;
     background: #2563eb;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
     padding: 12px 20px;
     border: none;
@@ -166,7 +176,7 @@
     transform: rotate(90deg);
 }
 
-/* 🔹 Modal Popup */
+/* 🔹 POPUP MODAL STYLES */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -191,26 +201,10 @@
     text-align: center;
     animation: slideUp 0.3s ease-in-out;
     position: relative;
+    font-family: "Lora", serif;
 }
 
-/* 🔹 Modal Title */
-.modal-content h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: "Poppins", sans-serif;
-    color: #2563eb;
-}
-
-/* 🔹 Modal Description */
-.modal-content p {
-    font-size: 1.2rem;
-    font-family: "Roboto", sans-serif;
-    color: #444;
-    line-height: 1.8;
-    letter-spacing: 0.4px;
-}
-
-/* 🔹 Close Button */
+/* Close Button */
 .close-btn {
     position: absolute;
     top: 15px;
@@ -226,7 +220,7 @@
     color: red;
 }
 
-/* 🔹 Animations */
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -235,4 +229,18 @@
 @keyframes slideUp {
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
+}
+
+/* Keyframes for Rolling & Bouncing */
+@keyframes rollBounce {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(20deg) scale(1.3); }
+    50% { transform: rotate(-20deg) scale(1.6); }
+    75% { transform: rotate(10deg) scale(1.3); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes bounceAnimation {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
