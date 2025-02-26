@@ -9,6 +9,7 @@
     background: linear-gradient(-45deg, #0f0102, #1749d3, #051120, #533483);
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
+    margin-top: 120px; /* ⬆ Increased top margin to prevent navbar overlap */
 }
 
 /* Animated Background */

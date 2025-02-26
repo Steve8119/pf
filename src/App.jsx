@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function App() {
   return (
@@ -12,7 +13,9 @@ export default function App() {
       <Home />
       <Skills />
       <Experience />
+      <WhatsAppButton />
       <Contact />
     </Layout>
+    
   );
 }
